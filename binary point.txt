@@ -1,0 +1,44 @@
+Binary point
+26.5 = 2 * 10pow(1) + 6 * 10pow(0) + 5 * 10pow(-1)
+shifting an integer to the right by 1 bit position is equivalent to dividing the number by 2
+
+53(base10 rep):
+2^5 | 2^4 | 2^3 | 2^2 | 2^1 | 2^0 |BINARY POINT| 2^-1 | 2^-2  >> shifting to the right(division)
+ 1     1     0     1     0     1                   0      0
+
+2^5 | 2^4 | 2^3 | 2^2 | 2^1 | 2^0 |BINARY POINT| 2^-1 | 2^-2 << shifting to the lfet (multiplication)
+ 0     1     1     0     1     0                  1     0
+
+ NOTICE that the bit pattern in 53 and 26.5 is the same they only differ in the binary point
+ !!: shifting the bit pattern of a number to the right by 1 bit always divide the number by 2. Similarly, shifting a number to the left by 1 bit multiplies the number by 2.
+
+To define a fixed point type conceptually, all we need are two parameters:
+
+- width of the number representation, and
+- binary point position within the number
+
+Fixed <8, 2>
+
+0100 10|11 = 1*2^4 + 1*2^1 + 1 * 2^-1 + 1 * 2^-2 = 16 + 2 + 0.5 + 0.25 = 18.75
+
+2pow(-1) : 0.5
+2pow(-2) : 0.25
+2pow(-3) : 0.125
+2pow(-4) : 0.0625
+2pow(-5) : 0.03125
+2pow(-6) : 0.015625
+2pow(-7) : 0.0078125
+2pow(-8) : 0.00390625
+2pow(-9) : 0.001953125
+2pow(-10): 0.0009765625
+
+
+
+1011 = -5 >> 101|1 ==> 
+0100 + 1 = 0101 == 4+1 = 5
+
+
+
+
+
+:
