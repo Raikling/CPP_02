@@ -171,7 +171,9 @@ Fixed Fixed::operator/(Fixed const& rhs) const
     return ret;
 }
 
-Fixed& Fixed::operator++()
+
+//read more about the differnce of the pre/post increment, when do we add int in the param
+Fixed& Fixed::operator++() 
 {
     this->_value++;
     return *this;
